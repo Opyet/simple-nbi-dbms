@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Nehemiah Builders Institute</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="students.html">Students</a>
+            <a href="cohorts.html">Cohorts</a>
+            <a href="courses.html">Courses</a>
+            <a href="#" id="logoutBtn">Logout (<span id="usernameDisplay"></span>)</a>
+        </nav>
+
+        <h1 id="courseFormTitle">Add New Course</h1>
+        <div id="courseMessage" class="message" style="display:none;"></div>
+        <form id="courseForm">
+            <div>
+                <label for="title">Course Title:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div>
+                <label for="code">Course Code:</label>
+                <input type="text" id="code" name="code" required>
+            </div>
+            <div>
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="3"></textarea>
+            </div>
+            <div>
+                <label for="units">Units:</label>
+                <input type="number" id="units" name="units" min="0" required>
+            </div>
+            <div>
+                <label for="sectionid">Course Section:</label>
+                <select id="sectionid" name="sectionid">
+                    </select>
+            </div>
+            <div>
+                <label for="teachingHours">Teaching Hours:</label>
+                <input type="number" id="teachingHours" name="teachingHours" min="0">
+            </div>
+            <div>
+                <label for="courseTypes">Course Types (comma-separated, e.g., core, elective):</label>
+                <input type="text" id="courseTypes" name="courseTypes">
+            </div>
+            <button type="submit">Save Course</button>
+        </form>
+
+        <div id="courseList">
+            </div>
+    </div>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/courses.js"></script>
+</body>
+</html>

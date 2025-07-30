@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students - Nehemiah Builders Institute</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="students.html">Students</a>
+            <a href="cohorts.html">Cohorts</a>
+            <a href="courses.html">Courses</a>
+            <a href="#" id="logoutBtn">Logout (<span id="usernameDisplay"></span>)</a>
+        </nav>
+
+        <h1 id="studentFormTitle">Add New Student</h1>
+        <div id="studentMessage" class="message" style="display:none;"></div>
+        <form id="studentForm">
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div id="passwordGroup">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" minlength="6" autocomplete="new-password">
+                <small>Required for new student. Leave empty for update if not changing password.</small>
+            </div>
+            <div>
+                <label for="surname">Surname:</label>
+                <input type="text" id="surname" name="surname" required>
+            </div>
+            <div>
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" required>
+            </div>
+            <div>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <div>
+                <label for="nationality">Nationality:</label>
+                <input type="text" id="nationality" name="nationality">
+            </div>
+            <div>
+                <input type="checkbox" id="isBornAgain" name="isBornAgain">
+                <label for="isBornAgain" style="display: inline;">Is Born Again?</label>
+            </div>
+            <button type="submit">Save Student</button>
+        </form>
+
+        <div id="studentList">
+            </div>
+    </div>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/students.js"></script>
+</body>
+</html>

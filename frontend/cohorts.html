@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cohorts - Nehemiah Builders Institute</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="students.html">Students</a>
+            <a href="cohorts.html">Cohorts</a>
+            <a href="courses.html">Courses</a>
+            <a href="#" id="logoutBtn">Logout (<span id="usernameDisplay"></span>)</a>
+        </nav>
+
+        <h1 id="cohortFormTitle">Add New Cohort</h1>
+        <div id="cohortMessage" class="message" style="display:none;"></div>
+        <form id="cohortForm">
+            <div>
+                <label for="name">Cohort Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate" name="startDate" required>
+            </div>
+            <div>
+                <label for="endDate">End Date:</label>
+                <input type="date" id="endDate" name="endDate" required>
+            </div>
+            <button type="submit">Save Cohort</button>
+        </form>
+
+        <div id="cohortList">
+            </div>
+    </div>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/cohorts.js"></script>
+</body>
+</html>
